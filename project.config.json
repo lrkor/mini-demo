@@ -14,7 +14,7 @@
         },
         "coverView": false,
         "postcss": false,
-        "minified": false,
+        "minified": true,
         "enhance": false,
         "showShadowRootInWxmlPanel": false,
         "packNpmManually": true,
@@ -26,7 +26,8 @@
         ],
         "ignoreUploadUnusedFiles": true,
         "compileHotReLoad": false,
-        "skylineRenderEnable": true
+        "skylineRenderEnable": true,
+        "uglifyFileName": true
     },
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},

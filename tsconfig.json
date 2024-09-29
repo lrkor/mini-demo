@@ -8,7 +8,7 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "experimentalDecorators": true,
-        "noImplicitThis": true,
+        "noImplicitThis": false,
         "noImplicitReturns": true,
         "alwaysStrict": true,
         "noFallthroughCasesInSwitch": true,
@@ -21,7 +21,7 @@
         "paths": {
             "@vant/weapp/*": ["path/to/node_modules/@vant/weapp/dist/*"]
         },
-        "lib": ["ES6"],
+        "lib": ["ES2020"],
         "typeRoots": ["./typings"]
     },
     "include": ["./**/*.ts"],

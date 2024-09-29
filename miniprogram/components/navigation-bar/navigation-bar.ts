@@ -59,11 +59,11 @@ Component({
     },
     lifetimes: {
         attached() {
-            const rect = wx.getMenuButtonBoundingClientRect()
+            const rect = wx.getMenuButtonBoundingClientRect();
             wx.getSystemInfo({
                 success: (res) => {
-                    const isAndroid = res.platform === 'android'
-                    const isDevtools = res.platform === 'devtools'
+                    const isAndroid = res.platform === 'android';
+                    const isDevtools = res.platform === 'devtools';
                     this.setData({
                         ios: !isAndroid,
                         innerPaddingRight: `padding-right: ${res.windowWidth - rect.left}px`,
@@ -72,9 +72,9 @@ Component({
                             isDevtools || isAndroid
                                 ? `height: calc(var(--height) + ${res.safeArea.top}px); padding-top: ${res.safeArea.top}px`
                                 : ``,
-                    })
+                    });
                 },
-            })
+            });
         },
     },
     /**
@@ -82,26 +82,26 @@ Component({
      */
     methods: {
         _showChange(show: boolean) {
-            const animated = this.data.animated
-            let displayStyle = ''
+            const animated = this.data.animated;
+            let displayStyle = '';
             if (animated) {
-                displayStyle = `opacity: ${show ? '1' : '0'};transition:opacity 0.5s;`
+                displayStyle = `opacity: ${show ? '1' : '0'};transition:opacity 0.5s;`;
             } else {
-                displayStyle = `display: ${show ? '' : 'none'}`
+                displayStyle = `display: ${show ? '' : 'none'}`;
             }
             this.setData({
                 displayStyle,
-            })
+            });
         },
         back() {
-            const data = this.data
+            const data = this.data;
             if (data.delta) {
                 wx.navigateBack({
                     delta: data.delta,
-                })
+                });
             }
-            this.triggerEvent('back', { delta: data.delta }, {})
+            this.triggerEvent('back', { delta: data.delta }, {});
         },
     },
-})
+});
 
