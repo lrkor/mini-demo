@@ -120,8 +120,8 @@ class HttpRequest {
                                     title: '登录失效',
                                     content: '登录失效，请重新登录',
                                 })
-                                .then((resModa) => {
-                                    if (resModa.confirm) {
+                                .then((resMod) => {
+                                    if (resMod.confirm) {
                                     }
                                 });
                         reject({ code, msg: '未登录', data: data });

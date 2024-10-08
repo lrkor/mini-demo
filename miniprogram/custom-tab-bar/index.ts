@@ -4,9 +4,19 @@ interface TabBarModel {
     url: string;
 }
 
+const app = getApp<IAppOption>();
+
 Component({
+    // 1.不同部分定义 properties
+    properties: {
+        selected: {
+            type: Number,
+            value: 0,
+        },
+    },
+
     data: {
-        active: 0,
+        active: app.globalData.tabBarIndex,
         list: [
             {
                 icon: 'wap-home-o',
@@ -23,11 +33,16 @@ Component({
 
     methods: {
         onChange(event: any) {
-            console.log(event);
-            this.setData({ active: event.detail });
+            app.globalData.tabBarIndex = event.detail;
             wx.switchTab({
                 url: this.data.list[event.detail].url,
             });
         },
+    },
+
+    ready: function () {
+        this.setData({
+            active: app.globalData.tabBarIndex,
+        });
     },
 });

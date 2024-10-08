@@ -25,6 +25,9 @@
             }
         ]
     },
+    "usingComponents": {
+        "custom-tab-bar": "/custom-tab-bar/index"
+    },
     "rendererOptions": {
         "skyline": {
             "defaultDisplayBlock": true,
