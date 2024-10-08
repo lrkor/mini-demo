@@ -1,9 +1,18 @@
 <!-- logs.wxml -->
 <navigation-bar title="首页" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
-    <van-button type="default">默认按钮</van-button>
-    <van-button type="primary">主要按钮</van-button>
-    <van-button type="info">信息按钮</van-button>
-    <van-button type="warning">警告按钮</van-button>
-    <van-button type="danger">危险按钮</van-button>
+    <view class="carousel">
+        <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" duration="{{1000}}" circular="{{true}}">
+            <block wx:for="{{background}}" wx:key="*this">
+                <swiper-item>
+                    <view class="swiper-item {{item}}">{{item}}</view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="content">
+        <block wx:for="{{list}}" wx:key="*this">
+            <view class="content-item">{{item}}</view>
+        </block>
+    </view>
 </scroll-view>

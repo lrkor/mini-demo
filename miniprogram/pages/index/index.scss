@@ -2,10 +2,52 @@ page {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #e3e3e3;
 
     scroll-view {
         flex: 1;
-        padding: 0 5vw;
+    }
+
+    .carousel {
+        swiper {
+            height: 375rpx;
+            margin-bottom: 30rpx;
+
+            .demo-text-1 {
+                background-color: red;
+            }
+
+            .demo-text-2 {
+                background-color: blue;
+            }
+
+            .demo-text-3 {
+                background-color: greenyellow;
+            }
+
+            .swiper-item {
+                height: 375rpx;
+                color: #fff;
+            }
+        }
+    }
+
+    .content {
+        background-color: #fff;
+        margin: 0 20rpx;
+        border-radius: 10rpx;
+        padding: 20rpx;
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            padding: 20rpx;
+            background-color: red;
+            width: 120rpx;
+            height: 120rpx;
+        }
     }
 }
 
